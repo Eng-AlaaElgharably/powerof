@@ -1,0 +1,163 @@
+$red: #bd2a2e
+$yellow: #f7b138
+
+body
+    font-family: '--font-lato'
+    direction: rtl
+.container
+    width: 1150px
+    margin: 0 auto
+header
+    .bar
+        color: $red
+        display: none
+        position: absolute
+        top: 0
+        left: 0
+        width: 70px
+        height: 70px 
+.logo
+    position: relative
+    height: 50px
+.nav-bar
+    a
+        padding: 10px
+        font-weight: bold
+        font-size: 18px
+        color: $red
+        transition: all 0.3s ease-in
+        &:hover
+            color: $yellow
+.header-image
+    position: relative
+    aspect-ratio: 2
+    h1
+        position: absolute
+        color: $yellow
+        font-weight: bold
+        font-size: 80px
+        width: 100%
+        height: 100%   
+        background-color: rgba(0, 0, 0, 0.4)
+.title
+    color: $red
+    padding: 40px 0 20px 0
+.about-text
+    text-align: justify
+    font-weight: bold
+    line-height: 2
+    font-size: 18px
+.about-image
+    position: relative
+    aspect-ratio: 2
+    img
+        border-radius: 10px
+.center-title
+    text-align: center
+#services
+    background-color: #f4f4f4
+.service
+    padding: 10px
+    margin: 10px
+    position: relative
+    border: 2px solid $red
+    border-radius: 10px
+    transition: all 0.3s ease-in  
+    img
+        border-radius: 10px 
+    p
+        font-weight: bold
+        font-size: 20px
+        padding: 10px 0
+        text-align: center
+        color: $red
+    &:hover
+        transform: scale(1.05)
+        border-color: $yellow
+        p
+            color: $yellow
+.product
+    padding: 10px
+    margin: 10px
+    position: relative
+    div
+        width: 100%
+        height: 100%
+        position: absolute
+        z-index: 1
+        top: 0
+        left: 0
+        transition: all 0.3s ease-in
+        color: #fff
+        border-radius: 10px
+    p
+        visibility: hidden
+        font-weight: bold
+        font-size: 18px
+        padding: 5px
+        text-align: center
+    &:hover
+        div
+            background-color: rgba(0, 0, 0, 0.6)
+        p
+            visibility: visible
+            cursor: default
+@keyframes slide 
+    0%
+        transform: translateX(0)
+    100% 
+        transform: translateX(100%)
+.slideshow-container
+    height: 120px
+    overflow: hidden
+    .slideshow
+        height: 100%
+        width: max-content
+        animation: slide 50s linear infinite
+        img
+            margin: 10px
+    &:hover
+        .slideshow
+            animation-play-state: paused
+footer
+    background-color: $red
+    i
+        margin: 10px
+        padding: 10px
+        border-radius: 10px
+        background-color: $yellow
+        color: #fff
+        width: 30px
+        height: 30px
+    p
+        color: #fff
+        font-weight: bold
+    .rights
+        border-top: 1px solid $yellow
+        i
+            margin: 5px
+
+@media screen and (max-width: 1150px)
+    .container
+        width: 100%
+@media screen and (max-width: 768px)
+    header
+        .bar
+            display: flex 
+        .hidden
+            display: none
+        .nav-bar
+            flex-direction: column
+            top: 0
+            left: 0
+            width: 100%
+            min-height: 100vh
+            z-index: 2
+            background-color: #fff
+    .header-image
+        h1
+            font-size: 32px
+@media screen and (max-width: 576px)
+    .rights
+        p, nav
+            justify-content: center
