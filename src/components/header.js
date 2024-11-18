@@ -42,7 +42,7 @@ export default function Header(){
             <div className="container">
                 <div className="row-grid">
                     <div className="g-c-3 g-c-md-6 logo">
-                        <Image src="/images/logo.png" alt="power of logo" width={180} height={50}></Image>
+                        <Image src="images/logo.png" alt="power of logo" width={180} height={50}></Image>
                     </div>
                     <div className="g-c-9 g-c-md-12 f-c-s nav-bar hidden">
                         <Link className="link" href='/'>الرئيسية</Link>
@@ -55,7 +55,7 @@ export default function Header(){
                 </div>
             </div>
             <div className="header-image">
-                <Image src="/images/header-background.jpg" fill="cover" alt="header image"></Image>
+                <Image src="images/header-background.jpg" fill="cover" alt="header image"></Image>
                 <h1 className="f-c-c">{text}</h1>
             </div>
         </header>
